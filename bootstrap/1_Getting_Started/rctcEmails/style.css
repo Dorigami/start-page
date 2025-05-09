@@ -1,0 +1,8 @@
+/* Styles go here */
+
+
+
+table {
+    /* removes spacing between cells in tables */
+    border-collapse: collapse;
+}
