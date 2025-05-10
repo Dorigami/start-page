@@ -54,9 +54,8 @@ function createCalendarWidget(root){
 function renderCalendar() {
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
     const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
-
-    const firstDayWeekday = firstDayOfMonth.getDay(); // Get the weekday of the first day of the month
-    const totalDaysInMonth = lastDayOfMonth.getDate(); // Get the total days in the month
+    const firstDayWeekday = firstDayOfMonth.getDay(); 
+    const totalDaysInMonth = lastDayOfMonth.getDate(); 
 
     // Set the calendar header (Month and Year)
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
