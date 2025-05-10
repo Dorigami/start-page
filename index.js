@@ -9,4 +9,3 @@ createCalendarWidget(calendarWidgetContainer);
 createDateWidget(dateWidgetContainer);
 createBGWidget(bgWidgetContainer);
 
-
