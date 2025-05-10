@@ -7,7 +7,12 @@ function createDateWidget(root){
     var clockWig = document.createElement('div');
     clockWig.setAttribute("id", "clock-widget");
     clockWig.className = 'clock-widget text-left';
-    clockWig.textContent = "00:00:00";
+    // set the current time
+    var now = new Date();
+    var hours = now.getHours().toString().padStart(2, '0');
+    var minutes = now.getMinutes().toString().padStart(2, '0');
+    var seconds = now.getSeconds().toString().padStart(2, '0');
+    clockWig.textContent = `${hours}:${minutes}:${seconds}`;
     // append the elements
     root.appendChild(dateWig);
     root.appendChild(clockWig);

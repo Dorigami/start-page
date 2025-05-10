@@ -1,14 +1,14 @@
 /* DEFAULTS */
 body {
-    /*font-family: Arial, sans-serif;*/
-    margin: 2%;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
     background-color: #f5f5f5;
     color: #333;
-    /*text-align: center;*/
 }
 .container {
-    margin: auto;
+    background: rgba( 200, 200, 200, 0.3);
+    border-radius: 0.4rem;
+    min-width: 80vw;
 }
 .links {
     display: flex;
@@ -17,20 +17,158 @@ body {
 }
 .links a {
     margin: 10px;
-    padding: 15px 25px;
-    background-color: #007BFF;
-    color: white;
+    padding: 15px 15px;
+    background-color: rgba( 200, 200, 200, 0.4);
+    color: #007BFF;
     text-decoration: none;
+    font-weight: bolder;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 .links a:hover {
-    background-color: #0056b3;
+    background-color: #007BFF;
+    color: white;
 }
 
 /* CUSTOMS */
-
 .widget {
-    margin: 0rem;
-    border: 0.1rem solid black;
+    margin: 0.2rem;
+    /* border: 0.1rem solid black; */
+    border-radius: 0.4rem;
+    background-color: rgba( 200, 200, 200, 0.6);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+.date-widget-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+.date-widget {
+    font-size: 2rem;
+    font-weight:bolder;
+    text-align: left;
+    color: rgb(200, 200, 200);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+.clock-widget {
+    text-align: left;
+    font-size: larger;
+    font-weight:bolder;
+    color: rgb(200, 200, 200);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+#bg-widget-btn, #create-note-btn {
+    display: flex; 
+    min-height: 40px; 
+    min-width: 40px; 
+    max-height: 100px; 
+    max-width: 100px;
+    border-width: 0.5rem;
+    color: #007BFF;
+    background-color: rgba( 200, 200, 200, 0.05);
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+#bg-widget-btn:hover, #create-note-btn:hover {
+    background-color: #007BFF;
+    color: rgb(200, 200, 200);
+}
+/* links */
+
+/* Calendar widget */
+.calendar-header {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+}
+.calendar-prev, .calendar-next {
+    transition: background-color 0.2s;
+    background-color: rgba(100,100,100,0.6);
+}
+.calendar-prev:hover, .calendar-next:hover {
+    background-color: rgba(240,240,240,0.6);
+    color: black;
+}
+
+.calendar-day {
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.current-day {
+    background-color: rgba(13, 110, 253,0.9);
+    color: white;
+    font-weight: bold;
+}
+.current-day:hover {
+    background-color: rgba(3, 100, 243,1);
+    font-weight: bold;
+}
+/* STICKY NOTE */
+.sticky-note {
+    min-width: 40px;
+    min-height: 40px;
+    width: 200px;
+    height: 180px;
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+    resize: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-header {
+    min-width: 40px;
+    min-height: 40px;
+    background-color: rgba(200,200,200,0.6);
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+}
+
+.note-body {
+    flex: 1;
+    padding: 8px;
+    overflow: auto;
+    cursor: text;
+}
+
+.resize-handle {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 4px;
+    bottom: 8px;
+    cursor: se-resize;
+    color: #007BFF;
+}
+
+.delete-btn {
+    width: auto;
+    height: auto;
+    border: none;
+    background: rgba(200,200,200,0.2);
+    cursor: pointer;
 }
